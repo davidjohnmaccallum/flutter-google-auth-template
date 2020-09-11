@@ -6,18 +6,19 @@ The goal, reduce the friction of starting an app that requires Google auth.
 
 The instructions below come from the [google_sign_in](https://pub.dev/packages/google_sign_in) package with a few tweaks.
 
-* TODO: Update Android applicatoinId
-* TODO: Update iOS bundle ID
+Update project name and description in pubspec.yaml
 
 Create a project on [Firebase](https://console.firebase.google.com). 
 * This will also register your project on [GCP](https://console.developers.google.com) (under the ALL projects tab).
 
-Enable the OAuth APIs that you want, using the [Google Cloud Platform API manager](https://console.developers.google.com/). 
-
 Configure the [OAuth consent screen](https://console.developers.google.com/apis/credentials/consent).
 * Setting the logo will require your app to be validated.
 
+Enable the OAuth APIs that you want, using the [Google Cloud Platform API manager](https://console.developers.google.com/). 
+
 ### Android Specific
+
+Update applicationId in android/app/build.gradle.
 
 Click the Android icon to register the app.
 * SHA certificate fingerprints are required for Google auth.
@@ -30,11 +31,15 @@ Troubleshooting `APIException` errors.
 
 ### iOS Specific Steps
 
+Open /ios folder in xCode and set Bundle Identifier on Runner/General tab.
+
 Click the iOS icon to register the app.
 
 Download GoogleService-Info.plist.
 
-Open xCode and drag the file into [my_project]/ios/Runner. Accept defaults.
+Drag the file into [my_project]/ios/Runner in xCode. 
+* Accept defaults.
+* Make sure xCode does not add this file to git.
 
 Add this to [my_project]/ios/Runner/Info.plist and update the value.
 
