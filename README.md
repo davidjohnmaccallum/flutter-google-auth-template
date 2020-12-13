@@ -37,7 +37,7 @@ Click the iOS icon to register the app.
 
 Download GoogleService-Info.plist.
 
-Drag the file into [my_project]/ios/Runner in xCode. 
+Drag the file into [my_project]/ios/Runner/Runner in xCode. 
 * Accept defaults.
 * Make sure xCode does not add this file to git.
 
